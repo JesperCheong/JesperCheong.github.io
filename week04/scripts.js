@@ -1,7 +1,7 @@
 function transformUpperCase() {
-    let a = document.getElementById("namePengguna");
+    let a = document.getElementById("namaPengguna");
     a.value = a.value.toUpperCase();
 }
 
-let elUsername = document.getElementById("namePengguna");
+let elUsername = document.getElementById("namaPengguna");
 elUsername.addEventListener("keyup", transformUpperCase);
