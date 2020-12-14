@@ -17,7 +17,7 @@ let app2 = new Vue({
 let app3 = new Vue({
     el: "#app3",
     data: {
-        seen:true
+        seen: true
     }
 });
 
@@ -25,9 +25,21 @@ let app4 = new Vue({
     el: "#app4",
     data: {
         todos: [
-            {text: "Learn Javascript"},
-            {text: "Learn Vue"},
-            {text: "Build something awesome!"}
+            { text: "Learn Javascript" },
+            { text: "Learn Vue" },
+            { text: "Build something awesome!" }
         ]
+    }
+});
+
+let app5 = new Vue({
+    el: "#app5",
+    data: {
+        message: "Pyro Diluc"
+    },
+    methods: {
+        reverseMessage: function () {
+            this.message = this.message.split("").reverse().join("");
+        }
     }
 });

@@ -12,7 +12,7 @@
         {{ message }}
     </div>
 
-    <div id="app2">
+    <div id="app2"> <!-- v-bind -->
         <span v-bind:title="message"> <!-- v-bind to put variable in html atrribute --> 
             Hover your mouse over me for a few seconds to see the title!
         </span><br>
@@ -20,11 +20,11 @@
         <a v-bind:href="linkURL" target="_blank">{{ linkText }}</a> <!-- double curly bracket to put variable for content (not attribute) -->
     </div>
 
-    <div id="app3">
+    <div id="app3"> <!-- v-if -->
         <span v-if="seen">Now you see me</span>
     </div>
 
-    <div id="app4">
+    <div id="app4"> <!-- v-for -->
         <ol>
             <li v-for="todo in todos"> <!-- todo folo todo, todos folo todos -->
                 {{todo.text}}
@@ -32,6 +32,12 @@
         </ol>
     </div>
 
+    <div id="app5"> <!-- event -->
+        <p>{{message}}</p>
+        <button v-on:click="reverseMessage">
+            Reverse the message!
+        </button>
+    </div> 
     
 
 
