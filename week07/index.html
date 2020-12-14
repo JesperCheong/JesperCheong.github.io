@@ -13,13 +13,20 @@
     </div>
 
     <div id="app2">
-        <span v-bind:title="message">
+        <span v-bind:title="message"> <!-- v-bind to put variable in html atrribute --> 
             Hover your mouse over me for a few seconds to see the title!
         </span><br>
 
-        <a v-bind:href="linkURL" target="_blank">{{ linkText }}</a>
-
+        <a v-bind:href="linkURL" target="_blank">{{ linkText }}</a> <!-- double curly bracket to put variable for content (not attribute) -->
     </div>
+
+    <div id="app3">
+        <span v-if="seen">Now you see me</span>
+    </div>
+
+
+
+
     
 
     <script src="scripts/index.js"></script>
