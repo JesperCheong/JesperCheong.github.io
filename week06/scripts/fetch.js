@@ -28,7 +28,7 @@ function GetBookings() {
 
 let getBookingBtn = document.getElementById("getBooking");
 getBookingBtn.addEventListener("click", function () {
-    getBookings();
+    GetBookings();
 });
 
 
