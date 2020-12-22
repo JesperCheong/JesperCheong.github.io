@@ -8,7 +8,7 @@ function GetBookings() {
             let bookingList = document.getElementById("bookingList");
             let bookingIds = [];
 
-            //clear the table rows
+            //clear the table rows.
             for (let k = bookingList.rows.length -1; k>0; k--){
                 bookingList.deleteRow(k);
             }
