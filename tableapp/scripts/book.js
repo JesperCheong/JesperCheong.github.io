@@ -1,5 +1,9 @@
+window.addEventListener("load", function () {
+    document.getElementById("userDate").valueAsDate = new Date();
+});
+
 function BookNow(guestName, guestEmail, guestPax, guestRemarks) {
-    let url = 'https://api.sheety.co/766f50739fb40a2b659c331650277aa7/bookingApp/bookings';
+    let url = 'https://api.sheety.co/766f50739fb40a2b659c331650277aa7/bookingApp/bookings1';
     let body = {
         booking: {
             name: guestName,
