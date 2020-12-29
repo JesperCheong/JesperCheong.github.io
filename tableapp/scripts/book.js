@@ -1,8 +1,8 @@
 window.addEventListener("load", function () {
     document.getElementById("userDate").valueAsDate = new Date();
-}); 
+});
 
-function BookNow(guestName, guestContact,guestEmail, guestDate, guestSession, guestPax, guestRemarks) {
+function BookNow(guestName, guestContact, guestEmail, guestDate, guestSession, guestPax, guestRemarks) {
     let url = 'https://api.sheety.co/766f50739fb40a2b659c331650277aa7/bookingApp/bookings';
     let body = {
         booking: {
@@ -25,8 +25,8 @@ function BookNow(guestName, guestContact,guestEmail, guestDate, guestSession, gu
             alert(json.booking.name + " added!");
         });
 }
-/*
-let bookNow = document.getElementById("bookNow");
+
+/*let bookNow = document.getElementById("bookNow");
 bookNow.addEventListener("click", function () {
     let gName = document.getElementById("guestName").value;
     let gEmail = document.getElementById("guestEmail").value;
@@ -38,7 +38,7 @@ bookNow.addEventListener("click", function () {
 window.addEventListener("load", function () {
     document.getElementById("bookNow").addEventListener("click", function () {
         let userName = document.getElementById("userName").value;
-        let userContact = DocumentTimeline.getElementById("userContact").value;
+        let userContact = document.getElementById("userContact").value;
         let userEmail = document.getElementById("userEmail").value;
         let userDate = document.getElementById("userDate").value;
         let userSession = document.getElementById("userSession").value;
