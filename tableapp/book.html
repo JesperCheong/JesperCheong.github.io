@@ -71,62 +71,73 @@
         </div>
 
         <!-- Booking Form -->
-        <div class="row">
-            <div class="col mx-5 px-5">
-                <div class="form-group">
-                    <label for="userName">Name:</label>
-                    <input type="text" class="form-control" id="userName" placeholder="Please enter your name here">
-                </div>
-
-                <div class="form-group">
-                    <label for="userEmail">Email:</label>
-                    <input type="email" class="form-control" id="userEmail" placeholder="Please enter your email here">
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group col-4">
-                        <label for="userDate">Date:</label>
-                        <input type="date" id="userDate" class="form-control">
+        <form>
+            <div class="row">
+                <div class="col mx-5 px-5">
+                    <div class="form-group">
+                        <label for="userName">Name:</label>
+                        <input type="text" class="form-control" id="userName" placeholder="Please enter your name here"
+                            required>
                     </div>
-                    <div class="col-1"></div>
-                    <div class="form-group col-3">
-                        <label for="userSession">Session:</label>
-                        <select id="userSession" class="form-control">
-                            <option selected disabled>Session</option>
-                            <option>Morning</option>
-                            <option>Afternoon</option>
-                            <option>Night</option>
-                        </select>
+
+                    <div class="form-group">
+                        <label for="userEmail">Email:</label>
+                        <input type="email" class="form-control" id="userEmail"
+                            placeholder="Please enter your email here" required>
                     </div>
-                    <div class="col-1"></div>
-                    <div class="form-group col-3">
-                        <label for="userPax">Pax:</label>
-                        <select id="userPax" class="form-control">
-                            <option selected disabled>Pax</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
-                            <option>10</option>
-                        </select>
+
+                    <div class="form-row">
+                        <div class="form-group col-5">
+                            <label for="userDate">Date:</label>
+                            <input type="date" id="userDate" class="form-control" required>
+                        </div>
+
+                        <div class="form-group col-4">
+                            <label for="userSession">Session:</label>
+                            <select id="userSession" class="form-control" required>
+                                <option selected disabled value="" style="color:lightgrey">Session</option>
+                                <option>Morning</option>
+                                <option>Afternoon</option>
+                                <option>Night</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-3">
+                            <label for="userPax">Pax:</label>
+                            <select id="userPax" class="form-control" required>
+                                <option selected disabled value="" style="color:lightgrey">Pax</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                            </select>
+                        </div>
                     </div>
+
+                    <div class="form-group">
+                        <label for="userRemarks">Remarks*</label>
+                        <textarea class="form-control" id="userRemarks" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="bookNow">Submit</button>
+                    <!-- confirmation before submit -->
+
+
+                    <!--<div>*Optional</div>
+                    <div>Notes:</div>
+                    <div>1. Each session is subject to limited amount of different size table for reservation.</div>
+                    <div>2. The maximum number for the largest size table is 10pax, pleasse submit multiple bookings for reservation more than 10pax. </div>-->
                 </div>
-
-                <div class="form-group">
-                    <label for="userRemarks">Remarks</label>
-                    <textarea class="form-control" id="userRemarks" rows="3"></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary" id="bookNow">Submit</button>
-                <!-- confirmation before submit -->
-
             </div>
-        </div>
+        </form>
+
+
 
     </div>
 
