@@ -2,12 +2,15 @@ window.addEventListener("load", function () {
     document.getElementById("userDate").valueAsDate = new Date();
 });
 
-function BookNow(guestName, guestEmail, guestPax, guestRemarks) {
-    let url = 'https://api.sheety.co/766f50739fb40a2b659c331650277aa7/bookingApp/bookings1';
+function BookNow(guestName, guestContact,guestEmail, guestDate, guestSession, guestPax, guestRemarks) {
+    let url = 'https://api.sheety.co/766f50739fb40a2b659c331650277aa7/bookingApp/bookings';
     let body = {
         booking: {
             name: guestName,
+            contact: guestContact,
             email: guestEmail,
+            date: guestDate,
+            session: guestSession,
             pax: guestPax,
             remarks: guestRemarks
         }
@@ -35,10 +38,13 @@ bookNow.addEventListener("click", function () {
 window.addEventListener("load", function () {
     document.getElementById("bookNow").addEventListener("click", function () {
         let userName = document.getElementById("userName").value;
+        let userContact = DocumentTimeline.getElementById("userContact").value;
         let userEmail = document.getElementById("userEmail").value;
+        let userDate = document.getElementById("userDate").value;
+        let userSession = document.getElementById("userSession").value;
         let userPax = document.getElementById("userPax").value;
         let userRemarks = document.getElementById("userRemarks").value;
 
-        BookNow(userName, userEmail, userPax, userRemarks)
+        BookNow(userName, userContact, userEmail, userDate, userSession, userPax, userRemarks)
     });
 });
