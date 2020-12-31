@@ -71,64 +71,73 @@
         </div>
 
         <!-- Booking Form -->
+
         <div class="row">
             <div class="col">
-                <div class="form-group">
-                    <label for="userName">Name:</label>
-                    <input type="text" class="form-control" id="userName" placeholder="Please enter your name here"
-                        required>
-                </div>
-
-                <div class="form-group">
-                    <label for="userContact">Contact No:</label>
-                    <input type="text" class="form-control" id="userContact" placeholder="e.g. 012-34567890" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="userEmail">Email:</label>
-                    <input type="email" class="form-control" id="userEmail" placeholder="e.g. example@gmail.com"
-                        required>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group col-6">
-                        <label for="userDate">Date:</label>
-                        <input type="date" id="userDate" class="form-control" required>
+                <form class="was-validated">
+                    <div class="form-group">
+                        <label for="userName">Name:</label>
+                        <input type="text" class="form-control" id="userName" placeholder="e.g. Pepe The Frog" required>
+                        <div class="invalid-feedback">Please enter your name</div>
                     </div>
 
-                    <div class="form-group col-3">
-                        <label for="userSession">Session:</label>
-                        <select id="userSession" class="form-control" required>
-                            <option selected disabled value="" style="color:lightgrey">Session</option>
-                            <option>Morning</option>
-                            <option>Afternoon</option>
-                            <option>Night</option>
-                        </select>
+                    <div class="form-group">
+                        <label for="userContact">Contact No:</label>
+                        <input type="text" class="form-control" id="userContact" placeholder="e.g. 012-34567890"
+                            required>
+                        <div class="invalid-feedback">Please enter your contact number</div>
                     </div>
 
-                    <div class="form-group col-3">
-                        <label for="userPax">Pax:</label>
-                        <select id="userPax" class="form-control" required>
-                            <option selected disabled value="" style="color:lightgrey">Pax</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
-                            <option>10</option>
-                        </select>
+                    <div class="form-group">
+                        <label for="userEmail">Email:</label>
+                        <input type="email" class="form-control" id="userEmail" placeholder="e.g. example@gmail.com"
+                            required>
+                        <div class="invalid-feedback">Please enter a valid email address</div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label for="userRemarks">Remarks*</label>
-                    <textarea class="form-control" id="userRemarks" placeholder="What can we do to help you?"
-                        rows="3"></textarea>
-                </div>
+                    <div class="form-row">
+                        <div class="form-group col-6">
+                            <label for="userDate">Date:</label>
+                            <input type="date" id="userDate" class="form-control" required>
+                            <div class="invalid-feedback">Please choose a date for reservation</div>
+                        </div>
+
+                        <div class="form-group col-3">
+                            <label for="userSession">Session:</label>
+                            <select id="userSession" class="custom-select" required>
+                                <option selected disabled value="" style="color:lightgrey">Session</option>
+                                <option>Morning</option>
+                                <option>Afternoon</option>
+                                <option>Night</option>
+                            </select>
+                            <div class="invalid-feedback">Please choose a session for reservation</div>
+                        </div>
+
+                        <div class="form-group col-3">
+                            <label for="userPax">Pax:</label>
+                            <select id="userPax" class="custom-select" required>
+                                <option selected disabled value="" style="color:lightgrey">Pax</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                            </select>
+                            <div class="invalid-feedback">Please tell us the pax for reservation</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userRemarks">Remarks:*</label>
+                        <textarea class="form-control" id="userRemarks" placeholder="What can we do to help you?"
+                            rows="3"></textarea>
+                    </div>
+                </form>
 
                 <button type="submit" class="btn btn-primary" id="bookNow">Submit</button>
                 <!-- confirmation before submit -->
@@ -139,18 +148,19 @@
                     <div>1. Each session is subject to limited amount of different size table for reservation.</div>
                     <div>2. The maximum number for the largest size table is 10pax, pleasse submit multiple bookings for reservation more than 10pax. </div>-->
             </div>
-
         </div>
 
+    </div>
 
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-            crossorigin="anonymous"></script>
-        <script src="scripts/book.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <script src="scripts/book.js"></script>
 </body>
 
 </html>
