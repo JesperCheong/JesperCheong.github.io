@@ -7,39 +7,55 @@
     <title>Book A Table - Table Booking App</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
+    <!-- Raleway font-->
+
+    <style>
+        .textShadow1 {
+            text-shadow: 5px 5px 5px #000, -3px -3px 15px #000;
+        }
+
+        .textShadow2 {
+            text-shadow: 3px 2px 3px #000, -2px -1px 6px #000;
+        }
+
+        .whiteTxt {
+            color: white;
+        }
+    </style>
 
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid" style="min-height: 100vh;">
         <!-- NavBar v4.5 -->
-        <div class="row">
+        <div class="row sticky-top my-3">
             <div class="col px-0">
-                <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-                    <a class="navbar-brand" href="#">
-                        <img src="img/temerelogo.png" height="30" class="d-inline-block align-top ml-2 mr-3" alt=""
-                            loading="lazy">
-                        TEMERE
+                <nav class="navbar navbar-expand-lg navbar-light" style="background-color:white">
+                    <a class="navbar-brand" href="index.html" style="font-family: 'Raleway', sans-serif;">
+                        <img src="img/temerelogo.png" height="30" class="d-inline-block align-top mx-3" alt="TEMERE"
+                            loading="lazy">TEMERE
                     </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    <button class="navbar-toggler mx-3" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-5">
+                        <ul class="navbar-nav ml-3 mr-2">
                             <li class="nav-item">
                                 <a class="nav-link" href="index.html">Home</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="book.html">Reservation</a>
+                                <a class="nav-link" href="book.html">Reservations</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="list.html">View Bookings</a>
                             </li>
                         </ul>
 
-                        <a class="text-body" href="https://www.facebook.com/#" target="_blank">
+                        <a class="text-body ml-3" href="https://www.facebook.com/#" target="_blank">
                             <!-- use fb homepage as mockup -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                 class="bi bi-facebook mx-2" viewBox="0 0 16 16">
@@ -47,7 +63,7 @@
                                     d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
                             </svg>
                         </a>
-                        <a class="text-body" href="https://www.instagram.com/#" target="_blank">
+                        <a class="text-body mx-3" href="https://www.instagram.com/#" target="_blank">
                             <!-- use ig homepage as mockup -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                 class="bi bi-instagram mx-2" viewBox="0 0 16 16">
@@ -63,17 +79,20 @@
         <!-- Jumbotron -->
         <div class="row">
             <div class="col px-0">
-                <div class="jumbotron rounded-0">
-                    <h1 class="display-4">Yesss... You are here!</h1>
-                    <p class="lead">Tell us your plan and fill up your contact information</p>
+                <div class="jumbotron rounded-0"
+                    style="background-image: url(img/restaurant-table.jpg); background-size: cover; height: 100%;">
+                    <h1 class="display-4 whiteTxt textShadow1">Reservations</h1>
+                    <p class="lead whiteTxt textShadow2">Tell us your plan and fill up your contact information.</p>
                 </div>
             </div>
         </div>
 
         <!-- Booking Form -->
-
-        <div class="row">
-            <div class="col">
+        <div class="row mx-5">
+            <div class="col px-0" style="border-radius: 0%">
+                <div class="mt-5 mb-3" style="font-family: 'Raleway', sans-serif;">
+                    <h2>BOOK A TABLE</h2>
+                </div>
                 <form class="was-validated">
                     <div class="form-group">
                         <label for="userName">Name:</label>
@@ -96,13 +115,13 @@
                     </div>
 
                     <div class="form-row">
-                        <div class="form-group col-6">
+                        <div class="form-group col-md">
                             <label for="userDate">Date:</label>
                             <input type="date" id="userDate" class="form-control" required>
                             <div class="invalid-feedback">Please choose a date for reservation</div>
                         </div>
 
-                        <div class="form-group col-3">
+                        <div class="form-group col-md">
                             <label for="userSession">Session:</label>
                             <select id="userSession" class="custom-select" required>
                                 <option selected disabled value="" style="color:lightgrey">Session</option>
@@ -113,7 +132,7 @@
                             <div class="invalid-feedback">Please choose a session for reservation</div>
                         </div>
 
-                        <div class="form-group col-3">
+                        <div class="form-group col-md">
                             <label for="userPax">Pax:</label>
                             <select id="userPax" class="custom-select" required>
                                 <option selected disabled value="" style="color:lightgrey">Pax</option>
@@ -139,19 +158,66 @@
                     </div>
                 </form>
 
-                <button type="submit" class="btn btn-primary" id="bookNow">Submit</button>
-                <!-- confirmation before submit -->
+                <button type="submit" class="btn mt-3 mb-5 py-3 px-5 whiteTxt"
+                    style="background-color: rgb(52, 58, 64); border-radius: 0%;" id="bookNow"><b>BOOK A
+                        TABLE</b></button>
 
-
-                <!--<div>*Optional</div>
-                    <div>Notes:</div>
-                    <div>1. Each session is subject to limited amount of different size table for reservation.</div>
-                    <div>2. The maximum number for the largest size table is 10pax, pleasse submit multiple bookings for reservation more than 10pax. </div>-->
+                <div>Notes:</div>
+                <div class="mb-5">
+                    Number of tables available for booking at each session everyday as follow:
+                    <ul>
+                        <li>Four (4) small table [1-4pax]</li>
+                        <li>Two (2) medium table [5-8pax]</li>
+                        <li>One (1) large table [9-10pax]</li>
+                    </ul>                
+                </div>
             </div>
         </div>
 
+
+
     </div>
 
+    <footer>
+        <div class="row justify-content-center bg-dark whiteTxt mx-0">
+            <div class="col-md mx-2 mt-3 mb-3 text-center"><b>ABOUT US</b>
+                <div class="mt-2 mx-5 text-left">Everything we do is about you. From chefs who create exciting new
+                    flavors,
+                    to crew members who
+                    know exactly how you want your drink – we prioritize what you need to get you on your way.</div>
+            </div>
+
+            <div class="col-md mx-2 mt-3 mb-3 text-center"><b>FOLLOW US</b>
+                <div class="mt-2">
+                    <a class="text-body" href="https://www.facebook.com/#" target="_blank">
+                        <!-- use fb homepage as mockup -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-facebook m-2 whiteTxt" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                        </svg>
+                    </a>
+                    <a class="text-body" href="https://www.instagram.com/#" target="_blank">
+                        <!-- use ig homepage as mockup -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-instagram m-2 whiteTxt" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md mx-2 mt-3 mb-3 text-center"><b>HOURS</b>
+                <div class="mt-2">
+                    Monday - Thursday: <br> 10am to 10pm
+                    <br>
+                    Friday - Sunday: <br> 10am to 11pm
+                </div>
+            </div>
+
+        </div>
+    </footer>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
