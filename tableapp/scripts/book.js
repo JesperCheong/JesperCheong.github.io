@@ -1,7 +1,9 @@
+//make booking date default to today's date
 window.addEventListener("load", function () {
     document.getElementById("userDate").valueAsDate = new Date();
 });
 
+//form validation
 function Validation() {
     let validationId = ["userName", "userContact", "userEmail", "userDate", "userSession", "userPax"];
     let valid = true;
@@ -51,6 +53,7 @@ window.addEventListener("load", function () {
             let userPax = document.getElementById("userPax").value;
             let userRemark = document.getElementById("userRemarks").value;
             let userTable;
+            //determine user table size base on pax input from form
             if (userPax <= 4) {
                 userTable = "Small";
             } else if (userPax >= 5 && userPax <= 8) {
@@ -67,6 +70,7 @@ window.addEventListener("load", function () {
                     let mediumTable = 0;
                     let largeTable = 0;
 
+                    //count table availability in database according to date and session input from form
                     for (let i = 0; i < json.bookings.length; i++) {
                         let gDate = json.bookings[i].date;
                         let gSession = json.bookings[i].session;
@@ -85,6 +89,7 @@ window.addEventListener("load", function () {
                         }
                     }
                    
+                    //check table availability
                     if (userTable == "Small") {
                         if (smallTable >= 4) {
                             alert("Small tables (1-4pax) are fully booked");
